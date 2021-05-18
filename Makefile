@@ -5,13 +5,13 @@ install_requirements:
 	@pip install -r requirements.txt
 
 check_code:
-	@flake8 scripts/* packtest/*.py
+	@flake8 scripts/* cactest/*.py
 
 black:
-	@black scripts/* packtest/*.py
+	@black scripts/* cactest/*.py
 
 test:
-	@coverage run -m pytest tests/*.py
+	@coverage run -m pytest tests/test_*.py
 	@coverage report -m --omit="${VIRTUAL_ENV}/lib/python*"
 
 ftest:
@@ -22,8 +22,8 @@ clean:
 	@rm -f .coverage
 	@rm -fr */__pycache__ */*.pyc __pycache__
 	@rm -fr build dist
-	@rm -fr packtest-*.dist-info
-	@rm -fr packtest.egg-info
+	@rm -fr cactest-*.dist-info
+	@rm -fr cactest.egg-info
 
 install:
 	@pip install . -U

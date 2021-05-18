@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from packtest.lib import try_me
+
+#from termcolor import colored
+
+try_me()
