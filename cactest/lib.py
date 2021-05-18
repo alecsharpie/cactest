@@ -14,3 +14,6 @@ def try_me():
        |         |\n\
        |_________|\n\
        ", 'red'))
+
+if __name__ == "__main__":
+  try_me()
